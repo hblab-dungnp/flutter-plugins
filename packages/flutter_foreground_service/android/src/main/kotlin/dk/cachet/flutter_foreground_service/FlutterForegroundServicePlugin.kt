@@ -594,8 +594,8 @@ class FlutterForegroundServicePlugin: FlutterPlugin, MethodCallHandler, IntentSe
       try {
 
         newBuilder
-                .setContentTitle("Foreground Service")
-                .setContentText("Running")
+                .setContentTitle("")
+                .setContentText("")
                 .setOngoing(true)
                 .setOnlyAlertOnce(false)
                 .setSmallIcon(getHardcodedIconResourceId())
