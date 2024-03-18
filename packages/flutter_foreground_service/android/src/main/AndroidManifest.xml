@@ -2,10 +2,14 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <!--  Android 14 background compatibility-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
 
     <application>
-        <service android:name=".FlutterForegroundServicePlugin" android:exported="false"
-                 android:foregroundServiceType="connectedDevice|dataSync|location|mediaPlayback|mediaProjection|phoneCall"/>
+        <service android:name=".FlutterForegroundServicePlugin"
+                 android:foregroundServiceType="mediaProjection|camera|microphone"/>
     </application>
 
 </manifest>
